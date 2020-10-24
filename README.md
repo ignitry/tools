@@ -1,0 +1,2 @@
+- Docker
+  - Redis - Latest [`redismod`](https://github.com/RedisLabs/redismod) image
