@@ -1,0 +1,8 @@
+#!/bin/bash
+
+git checkout master
+git branch main
+git checkout main
+git push origin main
+git branch --delete master
+git push origin --delete master
