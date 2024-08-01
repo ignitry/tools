@@ -1,2 +1,3 @@
-- Docker
-  - Redis - Latest [`redismod`](https://github.com/RedisLabs/redismod) image
+-  ~~Docker~~ (to be removed)
+  - ~~Redis - Latest [`redismod`](https://github.com/RedisLabs/redismod) image~~
+- Meilisearch 1.8

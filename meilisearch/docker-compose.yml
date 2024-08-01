@@ -1,0 +1,10 @@
+services:
+  meilisearch:
+    image: getmeili/meilisearch:v1.8
+    ports:
+      - ${MEILISEARCH_URL}:7700
+    environment:
+      - MEILI_MASTER_KEY=${MEILI_MASTER_KEY}
+    volumes:
+      - ${MEILISEARCH_LOCAL_DATA}:/meili_data
+    restart: unless-stopped
