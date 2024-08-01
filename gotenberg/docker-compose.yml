@@ -1,0 +1,16 @@
+services:
+  gotenberg:
+    image: gotenberg/gotenberg:8
+    ports:
+      - "${GOTENBERG_PORT}:3000"
+
+# To access local web server
+# MacOS: use `host.docker.internal`
+# Unix: use `172.17.0.1`
+# ------------------
+# Example
+# curl --request POST http://localhost:5555/forms/chromium/convert/url \
+# --form "url=http://host.docker.internal:9002/document?d=quotation" \
+# --form "paperWidth=8.27" \
+# --form "paperHeight=11.7" \
+# -o quotation.pdf
