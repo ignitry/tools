@@ -1,0 +1,15 @@
+services:
+  caddy:
+    image: caddy:2.8.4-alpine
+    restart: unless-stopped
+    cap_add:
+      # https://unix.stackexchange.com/questions/508809/docker-running-an-app-with-net-admin-capability-involved-risks/508816#508816
+      - NET_ADMIN
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    # https://caddyserver.com/docs/quick-starts/reverse-proxy
+    command: "caddy reverse-proxy --from ${HOST} --to ${DESTINATION}"
+    # volumes:
+    #   - $PWD/Caddyfile:/etc/caddy/Caddyfile
