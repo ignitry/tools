@@ -1,0 +1,13 @@
+services:
+  faktory:
+    image: contribsys/faktory:latest
+    container_name: faktory
+    command: /faktory -b :7419 -w :7420 -e production
+    environment:
+      - FAKTORY_PASSWORD=${FAKTORY_PASSWORD}
+    ports:
+      - "127.0.0.1:${NETWORK_PORT}:7419"
+      - "127.0.0.1:${WEBUI_PORT}:7420"
+    volumes:
+      - ./data:/var/lib/faktory/db
+    restart: unless-stopped
