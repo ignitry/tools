@@ -16,6 +16,10 @@ List of various softwares use in Development.
 
 Refer to `docker run` command in [official docs](https://github.com/contribsys/faktory/wiki/Installation#docker)
 
+## Swagger UI
+
+Use docker compose with `swagger.json` file.
+
 ### env
 
 ```sh
