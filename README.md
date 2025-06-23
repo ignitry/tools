@@ -20,6 +20,11 @@ Refer to `docker run` command in [official docs](https://github.com/contribsys/f
 
 Use docker compose with `swagger.json` file.
 
+## Sonic
+
+[Github](https://github.com/valeriansaliou/sonic)
+Use docker compose with `config.cfg`.
+
 ### env
 
 ```sh
